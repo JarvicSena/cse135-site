@@ -32,3 +32,5 @@ are redirected (301) to:
 - https://richardandjames.site/robots.txt
 
 This is expected behavior.
+
+Set-up: Changes can be pushed into GitHub, which automatically are "pulled" by the server as GitHub has our real site, and the live site serves it.
