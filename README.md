@@ -34,4 +34,30 @@ are redirected (301) to:
 This is expected behavior.
 Note: All HTTP traffic is redirected by NGINX to the canonical HTTPS domain 'https://richardandjames.site'.
 
-Set-up: Changes can be pushed into Github, which automatically is pulled by the server as Github has our real site, and the live site serves it.
+## Deployment Setup
+
+This site is deployed automatically from GitHub to our DigitalOcean server.
+
+The repository is cloned on the server at:
+
+    /var/www/richardandjames.site/public_html
+
+The server is configured with a GitHub deploy key, allowing it to securely pull
+updates from the repository without requiring a password.
+
+A scheduled job runs on the server to fetch and reset the working directory to
+the latest commit on the `main` branch. As a result, any push to GitHub is
+automatically reflected on the live site within approximately one minute.
+
+This ensures that the live site is never edited manually and that GitHub remains
+the single source of truth for all deployed content.
+
+### Verifying Deployment
+
+To verify deployment, a change can be made to `index.html`, committed, and pushed
+to GitHub. The update will appear on the live site after the next scheduled pull.
+
+A short video demonstration of this process is included in the repository as
+`Github-Deploy.gif`.
+
+The server automatically resets its working directory to match the GitHub repository, ensuring GitHub is the single source of truth and preventing manual live edits
