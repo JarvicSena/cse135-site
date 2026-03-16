@@ -1,0 +1,14 @@
+{
+    "superadmin": {
+        "password_hash": "$2y$10$eRAPSY\/lCgE7D7XgeYBPpO7SqweuLN4RbL7yPXRLdd.35EZ\/ZyLKy",
+        "role": "superadmin"
+    },
+    "analyst": {
+        "password_hash": "$2y$10$L0CBiXJ\/507pxHCJVJOflemh2ko5.tJQPkH9YDTaiJvRj1Uoj73Ie",
+        "role": "analyst"
+    },
+    "viewer": {
+        "password_hash": "$2y$10$5SSJVdd6J3iMW7wkCwNDU.93NT9TT8cuChQBwJlGH6fqFWtqd8Li6",
+        "role": "viewer"
+    }
+}
